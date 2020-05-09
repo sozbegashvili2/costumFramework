@@ -1,0 +1,15 @@
+{
+    "name": "saba/practical",
+    "authors": [
+        {
+            "name": "Saba Ozbegashvili",
+            "email": "s_ozbegashvili2@cu.edu.ge"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\" : "."
+        }
+    }
+}
