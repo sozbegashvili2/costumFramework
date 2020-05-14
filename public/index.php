@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 use app\{Router,Request};
 use app\controllers\{HomeController,AboutController,ContactController};
 $router = new Router(new Request());
