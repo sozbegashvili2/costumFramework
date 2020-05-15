@@ -6,7 +6,9 @@
             "email": "s_ozbegashvili2@cu.edu.ge"
         }
     ],
-    "require": {},
+    "require": {
+      "ext-pdo": "*"
+    },
     "autoload": {
         "psr-4": {
             "app\\" : "."

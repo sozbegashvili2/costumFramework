@@ -1,6 +1,10 @@
 <?php
-if ($errors['email'] != 'Please fill This field' && $data['email'] != '') {
-    if (!filter_var($data['email'],FILTER_VALIDATE_EMAIL)) $errors['email'] = 'Invalid E-mail';
+$errors = $errors ?? [];
+$data = $data ?? [];
+if ($data){
+    if ($errors['email'] != 'Please fill This field' && $data['email'] != '') {
+        if (!filter_var($data['email'],FILTER_VALIDATE_EMAIL)) $errors['email'] = 'Invalid E-mail';
+    }
 }
 ?>
 <div>

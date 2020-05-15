@@ -1,13 +1,17 @@
 <?php
 namespace app;
+use app\db\Database;
+
 class Router
 {
     private $getRoutes = [];
     private $postRoutes = [];
+    public $database = null;
     public $request = null;
-    public function __construct(Request $request)
+    public function __construct(Request $request,Database $database)
     {
         $this->request = $request;
+        $this->database = $database;
     }
 
     public function get($path,$callback) {

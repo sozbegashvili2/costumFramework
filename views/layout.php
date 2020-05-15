@@ -21,6 +21,26 @@
         <li>
           <a href="/contact">Contact</a>
         </li>
+          <?php
+          if (!isset($_SESSION['currentUser'])) {
+              echo '<li>';
+              echo  '<a href="/login">Login</a>';
+              echo '</li>';
+          }
+          else
+          {
+              echo '<li>';
+              echo  '<a href="/logout">'.$_SESSION['currentUser'].' '.'Logout'.'</a>';
+              echo '</li>';
+          }
+          ?>
+          <?php
+          if (!isset($_SESSION['currentUser'])) {
+            echo  '<li>';
+            echo  '<a href="/register">Register</a>';
+            echo '</li>';
+          }
+          ?>
       </ul>
     </nav>
 <?php echo $content; ?>
